@@ -1,10 +1,10 @@
 <div align=center>
 
-# LeetCode Challenge
+# :checkered_flag: LeetCode Challenge :checkered_flag:
 
 </div>
 
-# 목적
+# :triangular_flag_on_post: 목적
 
 알고리즘은 깊이 있는 사고 체계와 큰 연관성이 있다.
 
@@ -16,7 +16,7 @@
 
 해결하며, 참여자는 알고리즘 실력 항샹 및 성취감에 목적을 둔다.
 
-# 규칙
+# :triangular_flag_on_post: 규칙
 
 1. 참여자들은 Leet Code 에 있는 모든 문제를 풀기위한 일정 기간을 설정한다.
 > EX) 6개월, 1년
