@@ -21,6 +21,5 @@ class Solution:
             for j in range(m):
                 if not arr[i][j] % 2 == 0:
                     result += 1
-        print(arr)
         
         return result
