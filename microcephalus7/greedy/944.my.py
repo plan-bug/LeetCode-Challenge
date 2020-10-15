@@ -1,3 +1,7 @@
+# 문제
+# list 의 요소들의 같은 index 에서 글자들이 정렬이 되지 않았을 경우 삭제
+# 삭제된 숫자 return
+
 # 전략
 # expression 으로 배열 각 요소 추출된 list 세팅
 # for 문 통해 A 요소 길이 만큼 indicing 된 list 생성
