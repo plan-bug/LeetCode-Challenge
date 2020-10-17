@@ -12,21 +12,31 @@ from typing import List
 
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        rest = 0
+        fiveDollar, tenDollar = 0, 0
         for i in bills:
             if i == 5:
-                rest += i
-            else:
-                rest -= (i-5)
-                if rest < 0:
+                fiveDollar += 1
+            if i == 10:
+                if fiveDollar <= 0:
                     return False
-                rest += i
-        return rest
+                fiveDollar -= 2
+            if i == 20:
+                if fiveDollar >= 3:
+                    fiveDollar -= 3
+                else:
+                    if fiveDollar <= 0 or tenDollar <= 0:
+                        return False
+                    fiveDollar -= 1
+                    tenDollar -= 1
+            if fiveDollar < 0 or tenDollar < 0:
+                return False
+            else:
+                return True
 
 
 solution = Solution()
 print(solution.lemonadeChange([5, 5, 5, 10, 20]))
 print(solution.lemonadeChange([5, 5, 10]))
 print(solution.lemonadeChange([10, 10]))
-print(solution.lemonadeChange([5, 5, 10, ]))
+print(solution.lemonadeChange([5, 5, 10, 10, 20]))
 print(solution.lemonadeChange([5, 10, 5, 20]))
