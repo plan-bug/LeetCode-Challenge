@@ -8,7 +8,6 @@ class Solution:
     def largestSumAfterKNegations(self, A: List[int], K: int):
         for i in range(K):
             A[A.index(min(A))] = - A[A.index(min(A))]
-
         return sum(A)
 
 
