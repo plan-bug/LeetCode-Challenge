@@ -7,32 +7,22 @@ from typing import List
 class Solution:
     def robotSim(self, commands: List[int], obstacles: [List[List[int]]]) -> int:
         x, y = 0, 0
-        direction = 0
-        formerCommand = 0
+        direction = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+        number = 0
         for i in commands:
             if i == -1:
-                if direction == 'N':
-                    direction += 1
-                elif direction == 'S':
-                    direction = 'W'
-                elif direction == 'E':
-                    direction = 'S'
-                else:
-                    direction = 'N'
+                number = (number+1) % 4
             elif i == -2:
-                if direction == 'N':
-                    direction = 'W'
-                if direction == 'S':
-                    direction = 'E'
-                if direction == 'E':
-                    direction = 'N'
-                else:
-                    direction = 'S'
+                number -= 1
             else:
+                number = (number-1) % 4
                 for j in range(i):
-                    x += i
+                    if [x+direction[number][0], y+direction[number][1]] not in obstacles:
+                        x += direction[number][0]
+                        y += direction[number][1]
         return (x**2)+(y**2)
 
 
 solution = Solution()
 print(solution.robotSim([4, -1, 3], []))
+print(solution.robotSim([4, -1, 4, -2, 4], [[2, 4]]))

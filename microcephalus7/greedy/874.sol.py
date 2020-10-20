@@ -1,5 +1,6 @@
 # 방위를 list 화.
 
+
 class Solution(object):
     def robotSim(self, commands, obstacles):
         position_offset = [(0, 1), (1, 0), (0, -1), (-1, 0)]
@@ -20,3 +21,4 @@ class Solution(object):
                 max_distance = max(max_distance, x**2 + y**2)
         print(x, y)
         return max_distance
+        return obstacles
