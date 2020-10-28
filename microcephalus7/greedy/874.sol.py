@@ -21,4 +21,8 @@ class Solution(object):
                 max_distance = max(max_distance, x**2 + y**2)
         print(x, y)
         return max_distance
-        return obstacles
+
+
+solution = Solution()
+print(solution.robotSim([4, -1, 3], []))
+print(solution.robotSim([4, -1, 4, -2, 4], [[2, 4]]))

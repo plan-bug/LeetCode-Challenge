@@ -8,7 +8,6 @@ from typing import List
 class Solution:
     def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
         formerNum = arr.pop(0)
-        progression = 0
         for i in sorted(arr):
             prog = i - formerNum
 

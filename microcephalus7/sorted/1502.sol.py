@@ -1,5 +1,7 @@
 # 처음부터 차이 return
 # 다음 요소와 차이의 합이 그 다음 요소 값이 아닐 경우 False return
+from typing import List
+
 
 class Solution:
     def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
