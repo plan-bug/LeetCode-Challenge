@@ -1,3 +1,4 @@
+# 먼저 정렬
 # list 각 요소 ()로 묶음
 # () 내부에는 원래 요소와 2진법 할 시 1의 개수
 # 1의 개수를 기준으로 정렬
@@ -7,6 +8,7 @@ from typing import List
 
 class Solution:
     def sortByBits(self, arr: List[int]) -> List[int]:
+        arr.sort()
         return [i for (i, j) in sorted([(i, bin(i)[2:].count('1'))
                                         for i in arr], key=lambda x: x[1])]
 
