@@ -1,3 +1,7 @@
+# 먼저 거꾸로 뒤집음
+# count 함수 이용하여 lambda 식으로 정렬
+# 거꾸로 된건 역정렬
+
 from typing import List
 
 
