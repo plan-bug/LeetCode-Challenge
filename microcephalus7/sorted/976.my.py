@@ -9,11 +9,9 @@ from typing import List
 class Solution:
     def largestPerimeter(self, A: List[int]) -> int:
         A.sort()
-        array = [A[i]+A[i+1]+A[i+2]
-                 for i in range(len(A)-2) if A[i+2] < (A[i+1] + A[i])]
-        if array == []:
-            return 0
-        return max(array)
+        array = [sum(A[i:i+3])
+                 for i in range(len(A)-2) if A[i+2] < sum(A[i:i+2])]
+        return array and max(array) or 0
 
 
 solution = Solution()

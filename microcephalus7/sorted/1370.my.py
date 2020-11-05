@@ -4,9 +4,7 @@
 
 class Solution:
     def sortString(self, s: str) -> str:
-        s = list(s)
-        temp = list(set(s))
-        return temp
+        return list(set(list(s)))
 
 
 solution = Solution()
