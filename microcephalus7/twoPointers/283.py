@@ -7,8 +7,10 @@ from typing import List
 
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        zero = [0 * nums.count(0)]
-        nums = [i for i in nums if i != 0]
+        for i in nums:
+            if i == 0:
+                nums.remove(i)
+                nums.append(0)
 
 
 solution = Solution()
