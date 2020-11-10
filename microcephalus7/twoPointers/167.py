@@ -1,8 +1,7 @@
-# two pointer 문제
-# start, end 두 변수 둠
-# while 문
-# if 문으로 continue 통제
-# while 문으로 돌며 맞는 start,end 찾을 시 return
+# 딕셔너리 생성
+# numbers 엘리먼트를 (인덱스, 요소값) 으로 나눔
+# 키를 target 값을 요소값으로 뺀 수, 값을 해당값 index에 1 더한 수 의 쌍 딕셔너리에 넣음
+# 다음 이터레이션에서 요소값이 딕셔너리에 있을 때 해당 요소 값과 지금 이터레이터 인덱스 return
 
 
 from typing import List
@@ -15,7 +14,6 @@ class Solution:
             if e in dict:
                 return (dict[e], i+1)
             dict[(target - e)] = i+1
-        return list(dict)
 
 
 solution = Solution()
