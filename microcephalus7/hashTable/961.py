@@ -1,16 +1,13 @@
 # 컴프레션
 # count 값이 N 인 요소 return
-from typing import List
+from typing import Collection, List
+
+from collections import Counter
 
 
 class Solution:
     def repeatedNTimes(self, A: List[int]) -> int:
-        A.sort()
-        a = 0
-        while(True):
-            if A.count(A[a]) == len(A)/2:
-                return A[a]
-            a += 1
+        return [i[0] for i in Counter(A).items() if i[1] == len(A)/2][0]
 
 
 solution = Solution()
