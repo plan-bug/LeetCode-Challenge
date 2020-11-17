@@ -1,19 +1,14 @@
+# A의 요소 전부 튜플로 변형
+# 모든 요소 더 한 list 생성
+# list 에서 count 한 수에 3씩 나누어 몫 만큼 새로운 요소에 더함
 from collections import Counter
+from functools import reduce
 from typing import List
 
 
 class Solution:
     def commonChars(self, A: List[str]) -> List[str]:
-        set_A = set(A[0])
-        for a in A[1:]:
-            set_A = set_A.intersection(a)
-        common_letters = []
-        for letter in set_A:
-            count = 101
-            for a in A:
-                count = min(count, a.count(letter))
-            common_letters += [letter] * count
-        return common_letters
+        return list(reduce(lambda x, y: x & y, [Counter(A[i]) for i in range(len(A))]).elements())
 
 
 solution = Solution()
