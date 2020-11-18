@@ -1,6 +1,7 @@
 # words 엘리먼트로 Counter 생성
-# 엘리먼트의 인덱스 값과 chars 의 index 값 이터레이션 하며 크기 비교
-# 모든 요소가 chars Counter 보다 작을 때 list 삽입
+# words 엘리먼트를 chars 를 Counter 한 거 뺌
+# 뺀 게 빈 Counter 일 경우 words 를 arr 에 더 함
+# arr의 길이를 더 한 수 return
 
 from collections import Counter
 from typing import List
@@ -8,13 +9,7 @@ from typing import List
 
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-        wordsCounter = [Counter(i) for i in words]
-        charsCounter = Counter(chars)
-        arr = []
-        for i in range(len(words)):
-            charsMinus = (wordsCounter[i]-charsCounter)
-            charsMinus == Counter() and arr.append(words[i]) or None
-        return sum([len(i)for i in arr])
+        return sum([len(w) for w in words if not (Counter(w) - Counter(chars))])
 
 
 solution = Solution()
