@@ -7,13 +7,13 @@ from typing import List
 class Solution:
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         res = 0
-        for row in range(len(grid)):
-            for column in range(len(grid[0])):
-                if grid[row][column]:
+        for rowIndex, row in enumerate(grid):
+            for colIndex, col in enumerate(row):
+                if col:
                     res += 4
-                    if row and grid[row-1][column]:
+                    if rowIndex and grid[rowIndex-1][colIndex]:
                         res -= 2
-                    if column and grid[row][column-1]:
+                    if colIndex and grid[rowIndex][colIndex-1]:
                         res -= 2
         return res
 
