@@ -1,3 +1,6 @@
+# 간단한 stack
+# ops 이터러블
+
 from typing import List
 
 
