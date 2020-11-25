@@ -10,10 +10,9 @@ class Solution:
     def minOperations(self, logs: List[str]) -> int:
         counter = 0
         for i in logs:
-            url = i[:-1]
-            if url == '.':
+            if i == './':
                 continue
-            elif url == '..':
+            elif i == '../':
                 if counter == 0:
                     continue
                 counter -= 1

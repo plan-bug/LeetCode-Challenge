@@ -5,10 +5,9 @@ class Solution:
     def minOperations(self, logs: List[str]) -> int:
         stack = []
         for i in logs:
-            url = i[:-1]
-            if url == '.':
+            if i == './':
                 continue
-            elif url == '..':
+            elif i == '../':
                 if len(stack) == 0:
                     continue
                 stack.pop()
