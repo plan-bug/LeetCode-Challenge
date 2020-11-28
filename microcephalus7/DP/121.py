@@ -1,8 +1,9 @@
-# 외부에서 배열 생성
+# 이익 변수 생성 후 0 할당(이익의 마이너스 값 고려)
+# 구입 변수 생성 후 첫번째 prices 에 생성
 # 이터러블
-# 이터러블 된 수 제외
-# 해당 수 보다 작은 배열 생성
-# =
+# i가 구입변수보다 작을 시 구입 변수로 재 설정
+# i-구입변수와 이익 비교해서 큰 수가 이익변수
+# 이익변수 return
 
 from typing import List
 
@@ -14,10 +15,10 @@ class Solution:
 
         profit = 0
         buyStock = prices[0]
-        for i in range(len(prices)):
-            if buyStock > prices[i]:
-                buyStock = prices[i]
-            profit = max((prices[i] - buyStock, profit))
+        for i in prices:
+            if buyStock > i:
+                buyStock = i
+            profit = max((i - buyStock, profit))
 
         return profit
 
