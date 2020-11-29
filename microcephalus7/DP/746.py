@@ -16,8 +16,5 @@ class Solution:
         return min(dp[-1], dp[-2])
 
 
-cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
-dp = [1, 100, 2, 3, 3, 103, 4, 5, 105, 6]
-
 solution = Solution()
 print(solution.minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))
