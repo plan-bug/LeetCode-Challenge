@@ -1,4 +1,4 @@
-
+# 각 Node 의 children 들을 나열하고 그걸 list 에 새로 담는 형식
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
         if not root:
