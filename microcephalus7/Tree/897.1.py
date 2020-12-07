@@ -25,8 +25,7 @@ class Solution:
                 node.right = TreeNode(arrPop)
                 bst(node.right)
             return node
-        newTree.right = bst(newTree)
-        return newTree
+        return bst(newTree)
 
         arrPop = arr.pop()
         newTree.right = TreeNode(arrPop)
