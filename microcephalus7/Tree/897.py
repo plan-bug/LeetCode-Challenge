@@ -1,19 +1,16 @@
-# 방법 1
-# stack 방식으로 모든 node 돌며 list에 삽입
-# list 정렬 후 Node 화
-
 class Solution:
+    def increasingBST(self, node: TreeNode) -> TreeNode:
+        dummy = tail = TreeNode()
+        while node is not None:
+            if node.left is not None:
+                predecessor = node.left
+                while predecessor.right is not None:
+                    predecessor = predecessor.right
 
-    def increasingBST(self, root: TreeNode) -> TreeNode:
-        if not root:
-            return None
-        stack = [root]
-        arr = []
-        while stack:
-            node = stack.pop()
-            if node:
-                arr.append(node.val)
-                stack.append(node.left)
-                stack.append(node.right)
-        arr = sorted(arr, reverse=True)
-        return arr
+                predecessor.right = node
+                left, node.left = node.left, None
+                node = left
+            else:
+                tail.right = tail = node
+                node = node.right
+        return dummy.right
