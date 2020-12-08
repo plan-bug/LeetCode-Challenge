@@ -2,6 +2,8 @@
 # stack 방식으로 모든 node 돌며 list에 삽입
 # list 정렬 후 Node 화
 
+# 부족한 점 : 논리성, 상상력
+
 class Solution:
     def increasingBST(self, root: TreeNode) -> TreeNode:
         if not root:
@@ -26,8 +28,3 @@ class Solution:
                 bst(node.right)
             return node
         return bst(newTree)
-
-        arrPop = arr.pop()
-        newTree.right = TreeNode(arrPop)
-        arrPop = arr.pop()
-        newTree.right.right = TreeNode(arrPop)
