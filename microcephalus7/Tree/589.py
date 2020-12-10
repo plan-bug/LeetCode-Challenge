@@ -1,9 +1,8 @@
-# DFS
-# queue 형성
-# queue val list에 집어 넣음
-# children 존재 할 시
-# children stack 에 집어넣고 val list 에 집어넣음
+
 from collections import deque
+
+# DFS
+# 재귀로 이터러블
 
 
 class Solution:
