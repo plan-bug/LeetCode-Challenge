@@ -1,6 +1,6 @@
 # DFS
-# list 둠
-# root값이 Node 이 될 때 list 합 sum
+# left, right 가 없을때 까지 while
+# 문자열은 더 하면 추가됨
 
 class Solution:
 
