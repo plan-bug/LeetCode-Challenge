@@ -1,3 +1,7 @@
+# node 와 node의 깊이 묶어서 하나로 표현
+# 하나의 깊이 마다 +1
+# return 값인 depth는 깊이 중 최대값
+
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
