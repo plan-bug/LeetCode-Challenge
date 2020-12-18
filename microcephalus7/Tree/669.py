@@ -1,4 +1,4 @@
-
+# val 이 low 보다 낮을 경우 return 으로 자르기
 class Solution:
     def trimBST(self, root: TreeNode, low: int, high: int) -> TreeNode:
         if not root:
