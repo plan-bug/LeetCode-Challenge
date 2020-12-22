@@ -7,18 +7,25 @@ class Solution:
 
     def tree2str(self, t: TreeNode) -> str:
         if not t:
-            return None
+            return self.result
 
         self.result += str(t.val)
 
         def string(node):
+            self.result += "("
             if node:
-                self.result += "("
                 self.result += str(node.val)
-                string(node.left)
-                string(node.right)
-                self.result += ")"
-
-        string(t.left)
-        string(t.right)
+                if node.right:
+                    string(node.left)
+                    string(node.right)
+                else:
+                    if node.left:
+                        string(node.left)
+            self.result += ")"
+        if t.right:
+            string(t.left)
+            string(t.right)
+        else:
+            if t.left:
+                string(t.left)
         return self.result
