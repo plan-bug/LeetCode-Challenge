@@ -6,26 +6,14 @@ class Solution:
         self.result = ""
 
     def tree2str(self, t: TreeNode) -> str:
-        if not t:
-            return self.result
-
-        self.result += str(t.val)
-
-        def string(node):
-            self.result += "("
-            if node:
-                self.result += str(node.val)
-                if node.right:
-                    string(node.left)
-                    string(node.right)
-                else:
-                    if node.left:
-                        string(node.left)
-            self.result += ")"
-        if t.right:
-            string(t.left)
-            string(t.right)
-        else:
-            if t.left:
-                string(t.left)
+        self.result += "("
+        if t:
+            self.result += str(t.val)
+            if t.right:
+                self.tree2str(t.left)
+                self.tree2str(t.right)
+            else:
+                if t.left:
+                    self.tree2str(t.left)
+        self.result += ")"
         return self.result
