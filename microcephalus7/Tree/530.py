@@ -11,14 +11,11 @@ class Solution:
         while stack:
             node = stack.pop()
             if node:
-                values.append(node)
+                values.append(node.val)
                 stack.append(node.left)
                 stack.append(node.right)
-        newValues = []
-        i = 0
-        j = 1
-        while j == len(values):
-            if i == j:
-                i == 0
-                j += 1
-            newValues.append()
+        values = sorted(values)
+        minimum = inf
+        for i in range(1, len(values)):
+            minimum = min(minimum, values[i]-values[i-1])
+        return minimum
