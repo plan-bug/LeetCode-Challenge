@@ -1,6 +1,5 @@
 # BST 돌며 모든 수 list
-# list 내부에서 값 차이로 만든 list 생성(절대값 메서드 사용)
-# 새 list에서 최소값 return
+# 정렬 후 DP로 최소 차이값 return
 
 class Solution:
     def getMinimumDifference(self, root: TreeNode) -> int:
