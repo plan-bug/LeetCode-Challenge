@@ -1,6 +1,6 @@
-# DFS
-# queue 2개 둠
-# 노드 돌며 비교
+# 재귀
+# p, q 값에따른 분기
+# and 로 모든 node돌며 다 같을 시 true 아니면 false
 
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
