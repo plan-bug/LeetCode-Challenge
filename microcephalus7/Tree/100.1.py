@@ -8,7 +8,7 @@ class Solution:
             first, second = stack.pop()
             if not first and not second:
                 pass
-            elif not first or second:
+            elif not first or not second:
                 return False
 
             else:
