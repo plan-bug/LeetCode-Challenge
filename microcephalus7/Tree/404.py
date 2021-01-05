@@ -14,9 +14,9 @@ class Solution:
                 recur(node.left)
             if node.right:
                 recur(root.right)
-            if not node:
-                return self.result
 
         def plus(node):
             self.result += node.val
-        return recur(root)
+        recur(root)
+
+        return self.result
