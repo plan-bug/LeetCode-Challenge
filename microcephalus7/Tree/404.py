@@ -6,17 +6,17 @@ class Solution:
     def sumOfLeftLeaves(self, root: TreeNode) -> int:
 
         if not root:
-            return None
+            return 0
 
-        def recur(node):
-            if node.left:
-                plus(node.left)
-                recur(node.left)
-            if node.right:
-                recur(root.right)
+        def recur(node, boolean):
+            if node:
+                if not node.left and not node.right:
+                    if boolean:
+                        self.result += node.val
+                else:
+                    recur(node.left, True)
+                    recur(node.right, False)
 
-        def plus(node):
-            self.result += node.val
-        recur(root)
+        recur(root, False)
 
         return self.result
