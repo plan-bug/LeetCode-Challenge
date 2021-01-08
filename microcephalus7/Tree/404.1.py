@@ -1,4 +1,4 @@
-# stack 시 튜플로 묶기
+# stack 특정 조건 필요함에 따라 튜플로 묶기
 # left 의 경우 True, right 의 경우 False 로 한 후 True/False 에 따라 연산
 
 class Solution:
