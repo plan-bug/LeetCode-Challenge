@@ -1,9 +1,4 @@
-# 필요 조건
-# p, q 루트의 모든 조상
 
-# 아이디어
-# 재귀
-# 루트 얻기
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
