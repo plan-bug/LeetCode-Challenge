@@ -1,0 +1,24 @@
+class Solution {
+    func maximumWealth(_ accounts: [[Int]]) -> Int {
+        
+        var wealthArr:[Int] = []
+        
+        var richestWealth:Int = 0
+        
+        accounts.forEach { account in
+            
+            let wealth:Int = account.reduce(0) { $0 + $1 }
+                          
+            wealthArr.append(wealth)    
+        }
+        
+        //sorted()는 원본 배열을 바꾸지 않지만, sort()는 원본 배열을 바꾼다. 여기서 우린
+        //바꾼 배열을 사용해야 하기 때문에 sort()를 써야함 !!!
+        wealthArr.sort(by: >)
+        
+        richestWealth = wealthArr[0]
+        
+        return richestWealth
+        
+    }
+}

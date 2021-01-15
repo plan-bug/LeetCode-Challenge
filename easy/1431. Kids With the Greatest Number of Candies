@@ -1,0 +1,32 @@
+class Solution {
+    func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
+        //extraCandies를 각 candy에 더했을때 greatest number 이상이냐 아니냐?
+        var boolArr = [Bool]()
+        
+        
+        let maxCandy = candies.sorted(by: >)[0]
+        
+        candies.forEach { //candy in
+            if $0 + extraCandies >= maxCandy {
+                boolArr.append(true)
+            } else {
+                boolArr.append(false)
+            }
+        }
+        
+        return boolArr
+    }
+}
+
+//☝️ 위에 내 풀이
+
+//👇 아래 다른 사람 풀이
+class Solution {
+    func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
+        let max = candies.max()!
+        return candies.map { $0 + extraCandies >= max }
+    }
+}
+
+//깨달은 점
+1. 배열에는 기본적을 max() 메소드를 통해 가장 높은 원소의 값을 뽑을 수 있다.
