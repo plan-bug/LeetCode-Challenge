@@ -1,0 +1,28 @@
+class Solution {
+    func shuffle(_ nums: [Int], _ n: Int) -> [Int] {
+        var xArr = [Int]()
+        var yArr = [Int]()
+        
+        var resultArr = [Int]()
+        
+        for index in 0...n - 1 {
+            let x = nums[index]
+            xArr.append(x)
+        }
+        for index in n...nums.count - 1 {
+            let y = nums[index]
+            yArr.append(y)
+        }
+        for index in 0...n - 1 {
+            let Xn = xArr[index]
+            resultArr.append(Xn)
+            let Yn = yArr[index]
+            resultArr.append(Yn)
+        }
+        
+        return resultArr
+    }
+}
+
+//음.. 위에 코드가 내 코드인데 뭔가 쓸때 없이 길다. 전부 for 문인데 한 번에 묶어서 해결도 가능할 듯 한데... 내일 다시 해봐야겠다.
+//한줄도 되는거였네 ^ㅗ^ 현타가 너무 오네. 공부해서 내일 다시 분석 후 올릴겁니다. 말리지 마이소
