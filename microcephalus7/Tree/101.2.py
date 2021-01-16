@@ -1,3 +1,5 @@
+# 교차 비교
+# 튜플로 묶어서 비교함
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         if not root:
