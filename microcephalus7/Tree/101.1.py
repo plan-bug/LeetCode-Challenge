@@ -1,4 +1,4 @@
-
+# 교차 비교는 mirror 효과
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         def isSym(L, R):
