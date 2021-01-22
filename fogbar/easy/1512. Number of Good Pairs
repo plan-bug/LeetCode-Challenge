@@ -1,0 +1,22 @@
+class Solution {
+    func numIdenticalPairs(_ nums: [Int]) -> Int {
+        //i보다 j가 커야하고, nums[i]와 nums[j]가 같아야 함.
+        
+        //얘는 for문 전체가 한번 돌때 1 추가
+        var i = 0
+        //리턴시킬 값
+        var pairs: Int = 0
+        
+        for _ in 0..<nums.count {
+            for (j, num) in nums.enumerated() {
+                if nums[i] == num && i < j {
+                    pairs += 1
+                }
+            }
+            i += 1
+        }
+        return pairs
+    }
+}
+
+//이야 저번에 1시간 20분 고민해서 안풀려서 그만뒀었는데 10분만에 풀리네. 좋다.
