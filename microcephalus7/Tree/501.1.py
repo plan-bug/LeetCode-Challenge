@@ -15,17 +15,16 @@ class Solution:
         if not root:
             return None
         counts = collections.Counter()
-       
+        mv = 0
         def collector(node):
-            
+            nonlocal mv
             if not node:
                 return
             counts[node.val] +=1
-            
+            mv = max(mv, counts[node.val])
             collector(node.left)
             collector(node.right)
         collector(root)
-        countMax =  max([v for k,v in counts.items()])
-        return [k for k,v in counts.items() if v == countMax]
+        return [k for k,v in counts.items() if v == mv]
         
         
