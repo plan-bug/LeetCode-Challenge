@@ -1,0 +1,18 @@
+class Solution {
+    func numJewelsInStones(_ jewels: String, _ stones: String) -> Int {
+        //jewels : 가지고 있는 돌의 타입을 보여줌.
+        //stones : 가지고 있는 돌을 보여줌.
+        //stones의 각 character는 가지고 있는 돌의 타입이다.
+        
+        var result: Int = 0
+        
+        for jewel in jewels {
+            for stone in stones {
+                if stone == jewel {
+                    result += 1
+                }
+            }
+        }
+        return result
+    }
+}
