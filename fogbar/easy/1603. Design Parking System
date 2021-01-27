@@ -1,0 +1,27 @@
+
+class ParkingSystem {
+
+    var avaliableSpace: [Int] = []
+    //init할때 파킹 갯수 생성 
+    //1, 2, 3
+    init(_ big: Int, _ medium: Int, _ small: Int) {
+        self.avaliableSpace.append(big)
+        self.avaliableSpace.append(medium)
+        self.avaliableSpace.append(small)
+    }
+    
+    func addCar(_ carType: Int) -> Bool {
+        if self.avaliableSpace[carType - 1] != 0 {
+            self.avaliableSpace[carType - 1] -= 1
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+/**
+ * Your ParkingSystem object will be instantiated and called as such:
+ * let obj = ParkingSystem(big, medium, small)
+ * let ret_1: Bool = obj.addCar(carType)
+ */
