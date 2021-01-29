@@ -1,4 +1,7 @@
-from typing import List
+# ㅣ1, ㅣ2 list 값들 모음
+# 해당 값들 이용해 새로운 ListNde 생성  
+
+
 
 
 class Solution:
