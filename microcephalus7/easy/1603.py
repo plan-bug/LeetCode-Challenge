@@ -1,3 +1,6 @@
+# 디자인
+# 어떤 자료구조를 만들고 그것을 활용하느냐
+
 class ParkingSystem:
 
     def __init__(self, big: int, medium: int, small: int):
