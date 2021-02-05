@@ -3,5 +3,6 @@ class Solution:
         res = [first]
         for i in encoded:
             res.append(res[-1]^i)
-        
         return res
+        
+        
