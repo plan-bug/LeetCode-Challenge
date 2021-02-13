@@ -1,3 +1,5 @@
+# 포인트 잘 움직이기
+
 class OrderedStream:
 
     def __init__(self, n: int):
@@ -10,7 +12,7 @@ class OrderedStream:
     def insert(self, idKey: int, value: str) -> List[str]:
         a = self.a
         i = self.i 
-        self.a[idKey] = value
+        a[idKey] = value
         if a[i]:
             self.i = a.index(None, i+1)
             return a[i:self.i]
