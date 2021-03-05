@@ -6,4 +6,5 @@ class Solution:
                 popIndex = stack.pop()
                 prices[popIndex]-=num
             stack.append(i)
+            
         return prices
