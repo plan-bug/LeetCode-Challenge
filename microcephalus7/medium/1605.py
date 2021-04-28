@@ -1,6 +1,9 @@
+# 천천히 법칙을 보아야 한다
+# 
+
 class Solution:
     def restoreMatrix(self, rowSum: List[int], colSum: List[int]) -> List[List[int]]:
-        res = [[0 for j in range(len(colSum))] for i in range(len(rowSum))]
+        res = [[0 for j in range(len(colSum))] for i in range(len(rowSum))] # 여기까지 풀었음
         i = 0
         j = 0
         while i <len(rowSum) and j<len(colSum):
