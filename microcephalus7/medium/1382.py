@@ -5,6 +5,9 @@
 # 중간 node 앞 은 head 의 왼팔이 됨
 # 중간 node 뒤는 head 의 오른팔이 됨
 
+# 복기
+# 하나의 기능을 더 해야할 때 함수를 만들자
+
 class TreeNode:
      def __init__(self, val=0, left=None, right=None):
          self.val = val
