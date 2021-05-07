@@ -1,3 +1,5 @@
+# 카운터 변수로 대처함
+
 import itertools
 
 class CombinationIterator:
