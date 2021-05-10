@@ -2,6 +2,9 @@
 # 전체 Linked List 의 길이
 # 해당 Linked List 의 순서
 
+# 전제 조건은 편견이였음!!!
+
+
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         original = head
