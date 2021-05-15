@@ -1,3 +1,8 @@
+# 시작/끝 인덱스의 특성을 간파함
+# 왜 알 수 있었을까?
+# 추론력!
+# 여러 linkedListLength, index 값을 가지고 특징을 찾음  
+
 class ListNode:
     def __init__(self, val=0, next=None):
       self.val = val
