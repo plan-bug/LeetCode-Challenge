@@ -2,16 +2,16 @@ class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         maxDif = 0
         
-        def dfs(node):
+        def dfs(node,a,b):
             nonlocal maxDif
-            if not node:
-                return 0
+            if node:
+                a, b =min(a,node.val), max(b, node.val)
+                maxDif = max(maxDif, b-a)
 
-            left = dfs(node.left)
-            right =dfs(node.right)
+                dfs(node.left, a,b)
+                dfs(node.right, a, b)
 
-            maxDif =  max(maxDif, abs())
-
-            return node.val
-        dfs(root)
+        dfs(root, float("inf"), float("-inf"))
+            
+            
         return maxDif
