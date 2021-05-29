@@ -5,5 +5,18 @@
 
 class Solution:
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
-        asciiPattern =''.join( [ord(i)-ord(pattern[0]) for i in pattern])
-        return [i for i in words]
+        
+        def helper( s ):
+            
+            char_index_dict = dict()
+            
+            for character in s:
+                
+                if character not in char_index_dict:
+                    char_index_dict[character] = str( len(char_index_dict) )
+        
+            return ''.join( map(char_index_dict.get, s) )   
+            
+        pattern_string = helper(pattern)
+        
+        return [ word for word in words if helper(word) == pattern_string ]
